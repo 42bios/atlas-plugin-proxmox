@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "connectorApi": 1,
+  "id": "proxmox-connector",
+  "name": "Proxmox VE connector",
+  "description": "Read-only nodes, VMs, LXC, storage and configured network interfaces; preserves guest identity across migration.",
+  "version": "0.1.0",
+  "runtime": "python",
+  "entrypoint": "connector.py",
+  "credentialRequired": true,
+  "configuration": [
+    {
+      "key": "upstreamUrl",
+      "label": "Proxmox HTTPS URL",
+      "type": "url",
+      "required": true
+    },
+    {
+      "key": "clusterName",
+      "label": "Cluster name",
+      "type": "text",
+      "default": "Proxmox VE"
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "6e84058f973e237ce97780de4e224250126b3e4f3b89e0493bdf8d5e6450cfd3"
+    },
+    {
+      "path": "connector.py",
+      "sha256": "85b7168aef53bb02c141681e5414f017612fa5e38fd25f9666dc9bfaee94382c"
+    },
+    {
+      "path": "common/runtime.py",
+      "sha256": "00ddc5770986e5417c4c028d976b05372b353cf1f74410468f0479ee44023ec2"
+    },
+    {
+      "path": "worker/collector.py",
+      "sha256": "2ca0ed0a6cda2e9578f215696578b5454cc80ba6318853eedfba19e3645c6825"
+    },
+    {
+      "path": "worker/runtime.py",
+      "sha256": "54613cf9989f3ad5155216e833069d52d3dca9aa3f3b0c4d388619673c5d83ef"
+    }
+  ]
+}
