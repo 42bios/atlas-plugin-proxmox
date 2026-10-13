@@ -31,13 +31,13 @@ def run(plugin, collect):
             headers = {'Authorization': 'Bearer '+secret('ATLAS_TOKEN_FILE'), 'Content-Type': 'application/json'}
             snapshot = collect(source)
             request(atlas+'/api/v1/connectors/snapshot', headers, snapshot)
-            request(atlas+'/api/v1/connectors/status', headers, {'connector': source, 'plugin': plugin, 'version': '1.0.0', 'phase': 'imported'})
+            request(atlas+'/api/v1/connectors/status', headers, {'connector': source, 'plugin': plugin, 'version': '1.0.1', 'phase': 'imported'})
             print('Snapshot imported', flush=True)
         except Exception as error:
             print('Import failed: '+type(error).__name__, flush=True)
             if headers:
                 try:
-                    request(atlas+'/api/v1/connectors/status', headers, {'connector': source, 'plugin': plugin, 'version': '1.0.0', 'phase': 'error'})
+                    request(atlas+'/api/v1/connectors/status', headers, {'connector': source, 'plugin': plugin, 'version': '1.0.1', 'phase': 'error'})
                 except Exception:
                     pass
             if os.environ.get('RUN_ONCE', 'true').lower() == 'true':

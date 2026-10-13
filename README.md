@@ -41,3 +41,7 @@ Run `python -m unittest discover -s tests`. After editing declared files, run `p
 Repository code runs with Atlas application permissions. Download checksums identify files; they do not establish author trust or sandbox execution. Install only reviewed code.
 
 API references: [Proxmox VE API documentation](https://pve.proxmox.com/wiki/Proxmox_VE_API), [API viewer](https://pve.proxmox.com/pve-docs/api-viewer/index.html), [cluster resource implementation](https://github.com/proxmox/pve-manager/blob/master/PVE/API2/Cluster.pm), [network API implementation](https://github.com/proxmox/pve-manager/blob/master/PVE/API2/Network.pm).
+
+## Compatibility regression checks
+
+Run `python3 -m unittest discover -s tests` before release. Fixtures cover upstream variations, unavailable queries and data minimization; they are not proof of a successful connection to every upstream release. The Kubernetes and Proxmox adapters remain fixture-validated until tested against a real installation.

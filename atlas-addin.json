@@ -4,7 +4,7 @@
   "id": "proxmox-connector",
   "name": "Proxmox VE connector",
   "description": "Read-only nodes, VMs, LXC, storage and configured network interfaces; preserves guest identity across migration.",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "runtime": "python",
   "entrypoint": "connector.py",
   "credentialRequired": true,
@@ -25,7 +25,7 @@
   "files": [
     {
       "path": "README.md",
-      "sha256": "6e84058f973e237ce97780de4e224250126b3e4f3b89e0493bdf8d5e6450cfd3"
+      "sha256": "e625e4b2399a3a70ca1703510ef5745a750938b5b45dae95f2c38997668add69"
     },
     {
       "path": "connector.py",
@@ -33,7 +33,7 @@
     },
     {
       "path": "common/runtime.py",
-      "sha256": "00ddc5770986e5417c4c028d976b05372b353cf1f74410468f0479ee44023ec2"
+      "sha256": "00c794546e700fb635c755b5c25994b84dd36ea38e576ff379861202f400dba5"
     },
     {
       "path": "worker/collector.py",
